@@ -1,0 +1,146 @@
+/* ============================================
+   COZY LAZY - Responsive Styles
+   ============================================ */
+
+/* === Navigation Responsive === */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: var(--space-sm) !important;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .nav-logo {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+        padding: var(--space-sm) 0;
+    }
+
+    .nav-links {
+        gap: var(--space-xs) !important;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+        letter-spacing: 0.05em;
+    }
+}
+
+/* === Tablet === */
+@media (max-width: 900px) {
+
+    /* Hero grid to single column */
+    #hero .container>div {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-md);
+    }
+
+    /* Hide side decorative content */
+    aside {
+        display: none !important;
+    }
+
+    /* Adjust card padding */
+    .glass-card {
+        padding: var(--space-lg);
+    }
+
+    /* Reduce heading sizes */
+    h1 {
+        font-size: clamp(36px, 8vw, 64px);
+    }
+
+    h2 {
+        font-size: clamp(28px, 6vw, 48px);
+    }
+
+    /* Product grid adjustments */
+    #coleccion>.container>div:last-child {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+        gap: var(--space-md);
+    }
+}
+
+/* === Mobile === */
+@media (max-width: 600px) {
+
+    /* Container padding */
+    .container {
+        width: 95%;
+    }
+
+    /* Section spacing */
+    section {
+        padding: var(--space-xl) 0;
+    }
+
+    /* Card padding */
+    .glass-card {
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 36px;
+        margin-bottom: var(--space-md);
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Stats grid single column */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    /* Product grid single column */
+    #coleccion>.container>div:last-child {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Hide cursor follower on mobile */
+    .cursor-follower {
+        display: none;
+    }
+
+    /* Reduce fabric node sizes */
+    .node-1,
+    .node-2 {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Button full width on mobile */
+    .pill {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* === Small Mobile === */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .glass-card {
+        padding: var(--space-sm);
+    }
+
+    .label {
+        font-size: 10px;
+    }
+}

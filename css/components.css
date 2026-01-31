@@ -1,0 +1,352 @@
+/* ============================================
+   COZY LAZY - Reusable Components
+   ============================================ */
+
+/* === Glass Card === */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    border: 1px solid var(--glass-border);
+    box-shadow:
+        var(--shadow-deep),
+        inset 0 0 40px rgba(255, 105, 180, 0.15);
+    transition: transform var(--transition-smooth), border-color var(--transition-quick);
+}
+
+.glass-card:hover {
+    transform: translateY(-10px) rotateX(2deg);
+    border-color: var(--orange-vibrant);
+    box-shadow: var(--shadow-glow);
+}
+
+/* === Pill Button === */
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--orange-vibrant);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: var(--shadow-glow);
+    cursor: pointer;
+    transition: all var(--transition-quick);
+    border: none;
+    text-decoration: none;
+    font-family: var(--font-display);
+}
+
+.pill:hover {
+    background: var(--pink-vibrant);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow-pink);
+}
+
+.pill svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* === Stats Grid === */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.stat-item {
+    border-top: 1px solid var(--glass-border);
+    padding-top: var(--space-sm);
+}
+
+.stat-value {
+    font-family: var(--font-mono);
+    color: white;
+    font-size: 24px;
+    display: block;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: var(--pink-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+    display: block;
+}
+
+/* === Product Card === */
+.product-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    border: 1px solid var(--glass-border);
+    transition: all var(--transition-smooth);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--orange-vibrant);
+    box-shadow: var(--shadow-glow);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--pink-soft), var(--orange-coral));
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-smooth);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: var(--space-sm);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg,
+            hsl(350, 65%, 35%) 0%,
+            hsl(355, 60%, 45%) 25%,
+            hsl(0, 55%, 50%) 50%,
+            hsl(345, 60%, 40%) 75%,
+            hsl(340, 65%, 30%) 100%);
+    perspective: 1000px;
+}
+
+/* Animated fabric texture layer */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    background-image: url("data:image/svg+xml,%3Csvg width='2000' height='2000' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' /%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Cpattern id='fabric' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cg opacity='0.2'%3E%3Cpath d='M0 0h50v50H0z' fill='%23000'/%3E%3Cpath d='M50 50h50v50H50z' fill='%23000'/%3E%3Cpath d='M25 0v100M0 25h100M75 0v100M0 75h100' stroke='%23fff' stroke-width='0.8'/%3E%3Ccircle cx='25' cy='25' r='2' fill='%23fff'/%3E%3Ccircle cx='75' cy='75' r='2' fill='%23fff'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='2000' height='2000' fill='url(%23fabric)'/%3E%3Crect width='2000' height='2000' fill='url(%23fabric)' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 1;
+    animation: fabricWave 20s ease-in-out infinite, fabricFloat 15s ease-in-out infinite alternate;
+    transform-style: preserve-3d;
+}
+
+/* 3D depth layer */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 2;
+    animation: depthPulse 8s ease-in-out infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 600px;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    animation: card3DEntrance 1.2s ease-out;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-content:hover {
+    transform: perspective(1000px) translateZ(20px) rotateX(2deg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* === Navigation Menu === */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--glass-border);
+    padding: var(--space-md) 0;
+    transition: transform 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--pink-medium);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color var(--transition-quick);
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: var(--orange-vibrant);
+}
+
+/* === Brand Sections === */
+.brand-section {
+    padding: var(--space-2xl) 0;
+    position: relative;
+    z-index: 10;
+}
+
+.brand-section.text-focus {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.brand-section.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+}
+
+.brand-content {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    border: 1px solid var(--glass-border);
+}
+
+.brand-content h3 {
+    color: var(--orange-vibrant);
+    margin-bottom: var(--space-md);
+    font-size: 24px;
+}
+
+.brand-content p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* === Differentiator Cards === */
+.diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.diff-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    border: 1px solid var(--glass-border);
+    transition: all var(--transition-smooth);
+    text-align: center;
+}
+
+.diff-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--orange-vibrant);
+    box-shadow: var(--shadow-glow);
+}
+
+.diff-icon {
+    font-size: 48px;
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+.diff-card h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: var(--space-sm);
+    font-weight: 700;
+}
+
+.diff-card p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* === Section Spacing === */
+section {
+    padding: var(--space-2xl) 0;
+    position: relative;
+    z-index: 10;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--pink-medium);
+    max-width: 600px;
+    margin: var(--space-md) auto 0;
+}

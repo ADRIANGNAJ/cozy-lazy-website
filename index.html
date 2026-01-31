@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="COZY LAZY - Experiencia premium de Pilates. Evento exclusivo 11 de abril + Colección limitada.">
+    <title>COZY LAZY - Wellness Premium</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">COZY LAZY</a>
+            <ul class="nav-links">
+                <li><a href="#historia" data-nav-link>Historia</a></li>
+                <li><a href="#vision" data-nav-link>Visión</a></li>
+                <li><a href="#porque" data-nav-link>Por Qué</a></li>
+                <li><a href="#evento" data-nav-link>Evento</a></li>
+                <li><a href="#coleccion" data-nav-link>Colección</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Logo Transition Overlay -->
+    <div class="logo-transition-overlay">
+        <img src="assets/images/cozy-lazy-logo.png" alt="COZY LAZY">
+    </div>
+
+    <!-- Custom Cursor Follower -->
+    <div class="cursor-follower" id="follower"></div>
+
+    <!-- Main Canvas -->
+    <div class="velvet-canvas">
+        <!-- Decorative Fabric Nodes -->
+        <div class="fabric-node node-1"></div>
+        <div class="fabric-node node-2"></div>
+
+        <!-- Hero Section -->
+        <div style="padding-top: 80px;"></div>
+        <section id="hero">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; perspective: 1000px;">
+
+                    <!-- Main Hero Card -->
+                    <main class="glass-card animate-reveal">
+                        <span class="label">Wellness Premium Experience</span>
+                        <h1>COZY<br>LAZY</h1>
+
+                        <p style="font-size: 18px; margin-bottom: 40px; max-width: 500px; line-height: 1.6;">
+                            Donde el bienestar se encuentra con el estilo. Experiencias exclusivas de Pilates y una
+                            colección que redefine el comfort premium.
+                        </p>
+
+                        <a href="#evento" class="pill">
+                            DESCUBRE EL EVENTO
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </a>
+
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-value">11 ABR</span>
+                                <span class="stat-label">Evento Exclusivo</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">4 SETS</span>
+                                <span class="stat-label">Colección Limitada</span>
+                            </div>
+                        </div>
+                    </main>
+
+                    <!-- Side Decorative Content -->
+                    <aside class="animate-fade-in stagger-2"
+                        style="display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 60px;">
+                        <div style="transform: rotate(90deg); transform-origin: left bottom; white-space: nowrap;">
+                            <span
+                                style="font-family: var(--font-mono); color: white; font-size: 14px; letter-spacing: 1em; opacity: 0.3;">
+                                PREMIUM · EXCLUSIVE · WELLNESS
+                            </span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historia Section -->
+        <section id="historia" class="brand-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="label">Nuestro Origen</span>
+                    <h2>DONDE NACE<br>EL CONFORT</h2>
+                </div>
+
+                <div class="brand-section text-focus">
+                    <div class="brand-content animate-fade-in">
+                        <p style="font-size: 18px; line-height: 1.8; margin-bottom: var(--space-md);">
+                            COZY LAZY nace de la creencia de que el bienestar no debe comprometer el estilo.
+                            Fundada con la visión de transformar la experiencia del Pilates, nuestra marca fusiona
+                            la práctica consciente con diseño premium que acompaña cada momento de tu día.
+                        </p>
+                        <p style="font-size: 16px; line-height: 1.8; opacity: 0.8;">
+                            Cada pieza, cada experiencia, está diseñada para elevar tu práctica y tu estilo de vida.
+                            No es solo ropa, es una extensión de tu compromiso con el bienestar integral.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visión Section -->
+        <section id="vision" class="brand-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="label">Hacia Dónde Vamos</span>
+                    <h2>REDEFINIENDO<br>WELLNESS PREMIUM</h2>
+                </div>
+
+                <div class="brand-section grid-layout">
+                    <div class="brand-content animate-fade-in stagger-1">
+                        <h3>Nuestra Visión</h3>
+                        <p>
+                            Ser la marca referente en lifestyle wellness, donde cada pieza cuenta una historia
+                            de confort intencional y cada experiencia transforma la manera en que vives el bienestar.
+                        </p>
+                    </div>
+
+                    <div class="brand-content animate-fade-in stagger-2">
+                        <h3>Nuestra Misión</h3>
+                        <p>
+                            Crear experiencias y productos que eleven tu práctica y tu estilo de vida,
+                            con autenticidad, calidad excepcional y un compromiso genuino con nuestra comunidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por Qué Nosotros Section -->
+        <section id="porque" class="brand-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="label">Nuestros Pilares</span>
+                    <h2>POR QUÉ<br>COZY LAZY</h2>
+                    <p class="section-subtitle">
+                        Tres razones que nos hacen únicos en el mundo del wellness premium
+                    </p>
+                </div>
+
+                <div class="diff-grid">
+                    <div class="diff-card animate-fade-in stagger-1">
+                        <span class="diff-icon">🎯</span>
+                        <h4>Calidad Premium</h4>
+                        <p>
+                            Materiales cuidadosamente seleccionados y diseño funcional que no compromete
+                            la estética. Cada detalle importa.
+                        </p>
+                    </div>
+
+                    <div class="diff-card animate-fade-in stagger-2">
+                        <span class="diff-icon">💫</span>
+                        <h4>Comunidad Exclusiva</h4>
+                        <p>
+                            Eventos únicos, acceso anticipado y una comunidad de personas que comparten
+                            tu visión del bienestar.
+                        </p>
+                    </div>
+
+                    <div class="diff-card animate-fade-in stagger-3">
+                        <span class="diff-icon">🌸</span>
+                        <h4>Experiencia Integral</h4>
+                        <p>
+                            Más que ropa, un estilo de vida. Atención personalizada y una marca que
+                            escucha a su comunidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Section (Placeholder) -->
+        <section id="evento">
+            <div class="container">
+                <div class="section-header">
+                    <span class="label">11 de Abril 2026</span>
+                    <h2>EVENTO<br>EXCLUSIVO</h2>
+                    <p class="section-subtitle">
+                        Una experiencia única con Amy Altamirano. Cupo limitado.
+                    </p>
+                </div>
+
+                <!-- Event Details -->
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-bottom: 40px;">
+                    <!-- Main Event Info -->
+                    <div class="glass-card animate-fade-in stagger-1">
+                        <div style="margin-bottom: 30px;">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">Pilates Experience con Amy Altamirano</h3>
+                            <p style="font-size: 16px; line-height: 1.8; opacity: 0.9; margin-bottom: 20px;">
+                                Una experiencia única que combina una sesión exclusiva de Pilates con Amy Altamirano,
+                                seguida de un brunch wellness y la presentación de nuestra colección limitada.
+                            </p>
+                            <p style="font-size: 16px; line-height: 1.8; opacity: 0.9;">
+                                Únete a una comunidad de personas que comparten tu pasión por el bienestar y el estilo.
+                                Cupo limitado a 25 personas para garantizar una experiencia íntima y personalizada.
+                            </p>
+                        </div>
+
+                        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                            <h4 style="font-size: 18px; margin-bottom: 20px; opacity: 0.7;">Incluye:</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li
+                                    style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center;">
+                                    <span style="margin-right: 12px; opacity: 0.6;">✓</span>
+                                    Sesión de Pilates (90 min) con Amy Altamirano
+                                </li>
+                                <li
+                                    style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center;">
+                                    <span style="margin-right: 12px; opacity: 0.6;">✓</span>
+                                    Brunch wellness premium
+                                </li>
+                                <li
+                                    style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center;">
+                                    <span style="margin-right: 12px; opacity: 0.6;">✓</span>
+                                    Acceso anticipado a la colección
+                                </li>
+                                <li
+                                    style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center;">
+                                    <span style="margin-right: 12px; opacity: 0.6;">✓</span>
+                                    Welcome kit exclusivo COZY LAZY
+                                </li>
+                                <li style="padding: 12px 0; display: flex; align-items: center;">
+                                    <span style="margin-right: 12px; opacity: 0.6;">✓</span>
+                                    Descuento del 20% en tu primera compra
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Event Details Card -->
+                    <div class="glass-card animate-fade-in stagger-2" style="display: flex; flex-direction: column;">
+                        <div style="flex: 1;">
+                            <div style="margin-bottom: 30px;">
+                                <span class="label" style="margin-bottom: 10px; display: block;">Fecha y Hora</span>
+                                <p style="font-size: 20px; font-weight: 700; margin-bottom: 5px;">Sábado 11 de Abril,
+                                    2026</p>
+                                <p style="opacity: 0.7;">9:00 AM - 1:00 PM</p>
+                            </div>
+
+                            <div style="margin-bottom: 30px;">
+                                <span class="label" style="margin-bottom: 10px; display: block;">Ubicación</span>
+                                <p style="font-size: 16px; margin-bottom: 5px;">Studio Wellness Premium</p>
+                                <p style="opacity: 0.7; font-size: 14px;">Av. Paseo de la Reforma 2620<br>Lomas Altas,
+                                    CDMX</p>
+                            </div>
+
+                            <div style="margin-bottom: 30px;">
+                                <span class="label" style="margin-bottom: 10px; display: block;">Cupo</span>
+                                <p style="font-size: 16px;">
+                                    <span style="color: var(--accent-primary); font-weight: 700;">18 de 25</span>
+                                    lugares disponibles
+                                </p>
+                            </div>
+
+                            <div
+                                style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-bottom: 30px;">
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px;">
+                                    <span style="opacity: 0.7;">Inversión</span>
+                                    <span style="font-size: 32px; font-weight: 800;">$1,850</span>
+                                </div>
+                                <p style="font-size: 12px; opacity: 0.5; text-align: right;">MXN por persona</p>
+                            </div>
+                        </div>
+
+                        <button class="pill" onclick="reservarEvento()"
+                            style="width: 100%; justify-content: center; font-size: 16px; padding: 18px;">
+                            RESERVAR MI LUGAR
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </button>
+                        <p style="font-size: 12px; opacity: 0.5; text-align: center; margin-top: 15px;">
+                            Pago seguro • Confirmación inmediata
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection Section (Placeholder) -->
+        <section id="coleccion">
+            <div class="container">
+                <div class="section-header">
+                    <span class="label">Colección Limitada</span>
+                    <h2>PREVENTA<br>EXCLUSIVA</h2>
+                    <p class="section-subtitle">
+                        4 sets únicos. Regístrate en la lista de espera y sé el primero en acceder.
+                    </p>
+                </div>
+
+                <!-- Product Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+
+                    <!-- Set 1: Cloud Serenity -->
+                    <div class="product-card animate-fade-in stagger-1">
+                        <div class="product-image"
+                            style="background: linear-gradient(135deg, #E8D5F2 0%, #C9B8E0 100%); position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.9); padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; color: #1a1a1a;">
+                                LIMITADO
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 48px; opacity: 0.3;">
+                                ☁️
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 class="product-title">Cloud Serenity Set</h3>
+                            <p class="product-description">Top de soporte medio + Leggings de cintura alta. Tela ultra
+                                suave con tecnología moisture-wicking. Color: Lavanda Dream.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+                                <span style="font-size: 24px; font-weight: 800;">$2,450</span>
+                                <span style="font-size: 14px; opacity: 0.6;">MXN</span>
+                            </div>
+                            <button class="pill" onclick="comprarSet('Cloud Serenity', 2450)"
+                                style="width: 100%; justify-content: center;">
+                                AGREGAR A LISTA
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Set 2: Midnight Flow -->
+                    <div class="product-card animate-fade-in stagger-2">
+                        <div class="product-image"
+                            style="background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%); position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.9); padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; color: #1a1a1a;">
+                                LIMITADO
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 48px; opacity: 0.3;">
+                                🌙
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 class="product-title">Midnight Flow Set</h3>
+                            <p class="product-description">Sports bra de alto impacto + Shorts de compresión. Diseño
+                                elegante con detalles reflectivos. Color: Black Onyx.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+                                <span style="font-size: 24px; font-weight: 800;">$2,650</span>
+                                <span style="font-size: 14px; opacity: 0.6;">MXN</span>
+                            </div>
+                            <button class="pill" onclick="comprarSet('Midnight Flow', 2650)"
+                                style="width: 100%; justify-content: center;">
+                                AGREGAR A LISTA
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Set 3: Rose Petal -->
+                    <div class="product-card animate-fade-in stagger-3">
+                        <div class="product-image"
+                            style="background: linear-gradient(135deg, #FFD6E8 0%, #FFC1DC 100%); position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.9); padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; color: #1a1a1a;">
+                                LIMITADO
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 48px; opacity: 0.3;">
+                                🌸
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 class="product-title">Rose Petal Set</h3>
+                            <p class="product-description">Crop top sin costuras + Biker shorts. Tela de compresión
+                                ligera con acabado mate premium. Color: Blush Rose.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+                                <span style="font-size: 24px; font-weight: 800;">$2,350</span>
+                                <span style="font-size: 14px; opacity: 0.6;">MXN</span>
+                            </div>
+                            <button class="pill" onclick="comprarSet('Rose Petal', 2350)"
+                                style="width: 100%; justify-content: center;">
+                                AGREGAR A LISTA
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Set 4: Sage Harmony -->
+                    <div class="product-card animate-fade-in stagger-4">
+                        <div class="product-image"
+                            style="background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%); position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.9); padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; color: #1a1a1a;">
+                                LIMITADO
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 48px; opacity: 0.3;">
+                                🍃
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 class="product-title">Sage Harmony Set</h3>
+                            <p class="product-description">Tank top fluido + Leggings 7/8. Tela eco-friendly con
+                                protección UV. Perfecto para yoga y Pilates. Color: Sage Green.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+                                <span style="font-size: 24px; font-weight: 800;">$2,550</span>
+                                <span style="font-size: 14px; opacity: 0.6;">MXN</span>
+                            </div>
+                            <button class="pill" onclick="comprarSet('Sage Harmony', 2550)"
+                                style="width: 100%; justify-content: center;">
+                                AGREGAR A LISTA
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
